@@ -11,28 +11,22 @@ namespace pares
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Digite par ou impar: ");
-            string escolha = Console.ReadLine().ToLower();
-            while (escolha != "par" && escolha != "impar")
-            {
-                Console.WriteLine("Digite par ou impar: ");
-                escolha = Console.ReadLine().ToLower();
+            Console.WriteLine("Digite 0 para pares e 1 para impares: ");
+            int opcao = int.Parse(Console.ReadLine());
+
+            int cont = opcao;
+
+            while (cont <= 20) 
+            { 
+            
+            Console.WriteLine(cont);
+                cont += 2;
+
+            
             }
 
-            for (int i = 1; i <= 20; i++)
-            {
-                if (escolha == "par" && i % 2 == 0)
-                {
-                    Console.WriteLine(i);
-                }
-                else if (escolha == "impar" && i % 2 == 1)
-                { 
-                    Console.WriteLine(i);
-                }
-                Console.ReadKey();
+            Console.ReadKey();
 
-
-            }
-        }     
-    }    
+        }
+    }
 }
